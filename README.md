@@ -14,6 +14,7 @@ A reusable SRE/platform engineering skill library built around:
 - `kubernetes-cluster-onboarding`
 - `migration-readiness`
 - `observability-slo-design`
+- `rca`
 - `repo-onboarding`
 - `service-reliability-onboarding`
 - `terraform-iac-review`
