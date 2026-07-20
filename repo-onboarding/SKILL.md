@@ -172,7 +172,7 @@ Useful commands:
 ```bash
 git log --oneline -- path/to/file
 git blame path/to/file
-grep -R -E "TODO|FIXME|HACK|workaround|temporary|skip" .
+grep -R -E 'TODO|FIXME|HACK|workaround|temporary|skip' .
 git shortlog -sn
 ```
 

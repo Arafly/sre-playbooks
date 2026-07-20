@@ -1,6 +1,6 @@
 ---
 name: service-reliability-onboarding
-description: Use this when taking ownership of a production service or system as an SRE/platform engineer — joining a new team, joining an on-call rotation, inheriting a service from another team, or any "here's the pager, good luck" moment. This is the kernel skill: it runs the full safe-entry arc and invokes terraform-iac-review, kubernetes-cluster-onboarding, observability-slo-design, incident-response, and rca sibling skills at the right phase instead of duplicating them. Trigger whenever the user says things like "I'm taking over this service", "I just joined this team and need to get up to speed", "I'm now on-call for X", "walk me through onboarding to this system", or "help me understand this production service", even if they do not use the word SRE or onboarding explicitly.
+description: Use this when taking ownership of a production service or system as an SRE/platform engineer — joining a new team, joining an on-call rotation, inheriting a service from another team, or any "here's the pager, good luck" moment. This is the kernel skill: it runs the full safe-entry arc and invokes terraform-iac-review, kubernetes-cluster-onboarding, cicd-pipeline-review, observability-slo-design, incident-response, and rca sibling skills at the right phase instead of duplicating them. Trigger whenever the user says things like "I'm taking over this service", "I just joined this team and need to get up to speed", "I'm now on-call for X", "walk me through onboarding to this system", or "help me understand this production service", even if they do not use the word SRE or onboarding explicitly.
 ---
 
 # Service Reliability Onboarding
@@ -162,6 +162,26 @@ Expected module output:
 - module/state map
 - blast-radius notes
 - drift/risk findings
+- safe-change recommendations
+
+### Invoke: `cicd-pipeline-review`
+
+Use this module to understand the service's deploy path: how a commit reaches this service in production.
+
+Apply it to:
+
+- build/test/deploy pipelines
+- triggers and promotion flow
+- runners
+- deploy credentials (OIDC/deploy roles)
+- approval gates and environment protection
+- rollback mechanism
+
+Expected module output:
+
+- pipeline/trigger/runner map
+- commit-to-production trace
+- supply-chain/delivery risk findings
 - safe-change recommendations
 
 Useful prompt:

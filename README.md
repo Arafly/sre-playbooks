@@ -6,6 +6,7 @@ A reusable SRE/platform engineering skill library built around:
 
 ## Included skills
 
+- `cicd-pipeline-review`
 - `design-review-adr`
 - `due-diligence`
 - `finops-review`
@@ -14,8 +15,10 @@ A reusable SRE/platform engineering skill library built around:
 - `kubernetes-cluster-onboarding`
 - `migration-readiness`
 - `observability-slo-design`
+- `production-readiness-review`
 - `rca`
 - `repo-onboarding`
+- `secrets-management-review`
 - `service-reliability-onboarding`
 - `terraform-iac-review`
 
