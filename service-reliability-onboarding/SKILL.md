@@ -1,6 +1,6 @@
 ---
 name: service-reliability-onboarding
-description: Use this when taking ownership of a production service or system as an SRE/platform engineer — joining a new team, joining an on-call rotation, inheriting a service from another team, or any "here's the pager, good luck" moment. This is the kernel skill: it runs the full safe-entry arc and invokes terraform-iac-review, kubernetes-cluster-onboarding, cicd-pipeline-review, observability-slo-design, incident-response, and rca sibling skills at the right phase instead of duplicating them. Trigger whenever the user says things like "I'm taking over this service", "I just joined this team and need to get up to speed", "I'm now on-call for X", "walk me through onboarding to this system", or "help me understand this production service", even if they do not use the word SRE or onboarding explicitly.
+description: Use this when taking ownership of a production service or system as an SRE/platform engineer — joining a new team, joining an on-call rotation, inheriting a service from another team, or any "here's the pager, good luck" moment. This is the kernel skill: it runs the full safe-entry arc and invokes terraform-iac-review, kubernetes-cluster-onboarding, cicd-pipeline-review, deployment-strategy-review, observability-slo-design, incident-response, and rca sibling skills at the right phase instead of duplicating them. Trigger whenever the user says things like "I'm taking over this service", "I just joined this team and need to get up to speed", "I'm now on-call for X", "walk me through onboarding to this system", or "help me understand this production service", even if they do not use the word SRE or onboarding explicitly.
 ---
 
 # Service Reliability Onboarding
@@ -109,6 +109,7 @@ Understand:
 - caches
 - external APIs
 - deploy path
+- rollout and rollback strategy
 - runtime platform
 - infrastructure ownership
 - secrets and config flow
@@ -182,6 +183,24 @@ Expected module output:
 - pipeline/trigger/runner map
 - commit-to-production trace
 - supply-chain/delivery risk findings
+- safe-change recommendations
+
+### Invoke: `deployment-strategy-review`
+
+Use this module to understand how a new version rolls out to live traffic and rolls back: the runtime step after the pipeline hands off.
+
+Apply it to:
+
+- rollout strategy (canary, blue-green, rolling)
+- traffic routing (service mesh, ingress, load balancer)
+- analysis/metric gates and automated abort
+- rollback mechanism and measured rollback time
+
+Expected module output:
+
+- rollout/strategy inventory
+- promotion-and-rollback trace
+- analysis/abort/rollback risk findings
 - safe-change recommendations
 
 Useful prompt:

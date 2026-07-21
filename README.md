@@ -7,6 +7,7 @@ A reusable SRE/platform engineering skill library built around:
 ## Included skills
 
 - `cicd-pipeline-review`
+- `deployment-strategy-review`
 - `design-review-adr`
 - `due-diligence`
 - `finops-review`
