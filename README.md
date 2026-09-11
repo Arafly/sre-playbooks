@@ -22,6 +22,7 @@ A reusable SRE/platform engineering skill library built around:
 - `secrets-management-review`
 - `service-reliability-onboarding`
 - `terraform-iac-review`
+- `terraform-state-migration`
 
 `service-reliability-onboarding` is the kernel. Other skills are standalone-triggerable modules.
 

@@ -165,6 +165,18 @@ Expected module output:
 - drift/risk findings
 - safe-change recommendations
 
+### Invoke conditionally: `terraform-state-migration`
+
+Use this module when IaC discovery shows that an already-existing remote resource must move between Terraform states, workspaces, modules, repositories, or ownership boundaries without recreating the remote object.
+
+Expected invariant:
+
+```text
+Remote object ID before = X
+Remote object ID after  = X
+Terraform owner changed; remote infrastructure did not.
+```
+
 ### Invoke: `cicd-pipeline-review`
 
 Use this module to understand the service's deploy path: how a commit reaches this service in production.

@@ -344,6 +344,12 @@ Deliverable:
 
 ---
 
+## Delegate state ownership moves
+
+If the review concludes that an existing remote resource should move between Terraform states, workspaces, repositories, or ownership boundaries **without recreating the remote object**, stop treating that as an ordinary IaC edit and invoke `terraform-state-migration`.
+
+That skill owns the remote-identity invariant, state backups, source/destination reconciliation, remove/import versus address-move decision, zero unintended create/destroy gate, and recovery plan.
+
 ## Phase 6 — Systematize
 
 Update context so the next engineer does not repeat the archaeology.
